@@ -17,4 +17,8 @@ def about():
 def ques(quiz_num,ques_num):
     print(quiz_num,ques_num)
     print(data['Q1'])
-    return render_template("question.html",quiz_dict=data["Q1"])
+    return render_template("question.html",question_url=data["Q1"]["q_url"])
+
+@app.route("/questionview/<ques_num>")
+def quesview(ques_num):
+    return render_template("question.html",question_url=data["Q"+ques_num]["q_url"])
