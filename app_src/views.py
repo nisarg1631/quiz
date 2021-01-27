@@ -7,11 +7,15 @@ with open('./quiz_data/new_year.json') as f:
 
 @app.route("/")
 def index():
-    return "Insert Welcome Page Here"
+    return render_template("home.html",home="active")
 
 @app.route("/about")
 def about():
-    return "Insert About Page Here"
+    return render_template("about.html",about="active")
+
+@app.route("/archives")
+def archive():
+    return render_template("archives.html",archives="active")
 
 @app.route("/question/<quiz_num>/<ques_num>")
 def ques(quiz_num,ques_num):
