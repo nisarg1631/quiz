@@ -20,12 +20,13 @@
 <div class="card bg-info text-white">
   Question
 </div>
-
-<div class="card-body">
+<div id="qlinks" class="card-body">
   <img class="card-img-top" src="{{question_data['q_url']}}" alt="Ques">
+  {% for url in question_data['extra_url'] %}
+  <hr>
+  <img class="card-img-top" src="{{url}}" alt="Ques">
+  {% endfor %}
 </div>
-
-
 <div class="card bg-info text-white">
   Answer
 </div>
