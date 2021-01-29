@@ -4,6 +4,10 @@
 
 {% block main %}
 <!-- home page content -->
+
+
+<a href="../question/{{random[0]}}/{{random[1]}}" class="btn btn-info">Random Question</a>
+
 <div id="tags" class="card-body">
     {% for x in tag_data %}
     <a href="../question/{{x[0]}}/{{x[1]}}" class="btn btn-primary">{{x[0]}} {{x[1]}}</a>

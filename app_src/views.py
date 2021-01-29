@@ -2,6 +2,7 @@
 from app_src import app
 from flask import render_template
 import json
+import random
 
 with open('./quiz_data/index.json') as f:
   data = json.load(f)
@@ -40,6 +41,6 @@ def tag_page(tag):
     if tag in ["mela","st","sp","biz","ind","gen"]:
         with open(f'./quiz_data/tagged/{tag}.json') as f1:
             lo_data = json.load(f1)
-        return render_template("actual_tag.html",TAG=tag,tag_data=lo_data)
+        return render_template("actual_tag.html",TAG=tag,tag_data=lo_data,random=random.choice(lo_data))
     else:
         return "Invalid 1"
