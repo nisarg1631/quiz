@@ -34,7 +34,10 @@ def ques(quiz_num,ques_num):
 
 @app.route("/tags")
 def tag_landing():
-    return render_template("tag.html")
+    rnd_top=random.choice(["mela","st","sp","ind","gen"]) # add biz back when it is non empty
+    with open(f'./quiz_data/tagged/{rnd_top}.json') as f1:
+        lo_data = json.load(f1)
+    return render_template("tag.html",random=random.choice(lo_data),rnd_topic=rnd_top)
 
 @app.route("/tags/<tag>")
 def tag_page(tag):
