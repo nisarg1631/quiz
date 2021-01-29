@@ -41,8 +41,6 @@ body {
 .cover-container {
   max-width: 42em;
 }
-
-
 /*
  * Header
  */
@@ -85,7 +83,11 @@ body {
   }
 }
 
-
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
 /*
  * Cover
  */

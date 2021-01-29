@@ -20,19 +20,17 @@ def archive():
 
 @app.route("/question/<quiz_num>/<ques_num>")
 def ques(quiz_num,ques_num):
-    print(quiz_num,ques_num)
     if(quiz_num in data): 
-        print(data[quiz_num])
         with open(f'./quiz_data/{data[quiz_num]}') as f1:
             lo_data = json.load(f1)
-        if(("Q"+ques_num ) in lo_data):
-            return render_template("question.html",question_url=lo_data["Q"+ques_num]["q_url"],answer_url=lo_data["Q"+ques_num]["a_url"])
+        if(ques_num in lo_data.keys()):
+            print("hi")
+            return render_template("question.html",question_data=lo_data[ques_num])
         else :
-            return "invalid"
-        
+            return "invalid 1"
     else:
-        return "invalid"
+        return "invalid 2"
 
-@app.route("/questionview/<ques_num>")
-def quesview(ques_num):
-    return render_template("question.html",question_url=data["Q"+ques_num]["q_url"])
+# @app.route("/random")
+# def randques():
+
