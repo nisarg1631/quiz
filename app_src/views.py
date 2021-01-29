@@ -31,6 +31,4 @@ def ques(quiz_num,ques_num):
     else:
         return "invalid 2"
 
-# @app.route("/random")
-# def randques():
 
