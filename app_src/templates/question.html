@@ -20,6 +20,7 @@
 <div class="card bg-info text-white">
   Question
 </div>
+
 <div id="qlinks" class="card-body">
   <img class="card-img-top" src="{{question_data['q_url']}}" alt="Ques">
   {% for url in question_data['extra_url'] %}
@@ -27,6 +28,7 @@
   <img class="card-img-top" src="{{url}}" alt="Ques">
   {% endfor %}
 </div>
+
 <div class="card bg-info text-white">
   Answer
 </div>
@@ -35,11 +37,22 @@
   <img class="card-img-top" src="{{question_data['a_url']}}" alt="Ans">
 </div>
 
+<div class="card bg-info text-white">
+  Tags
+</div>
+
+<div id="tags" class="card-body">
+
+  {% for tag in question_data['tags'] %}
+
+  <a href="../../tags/{{tag}}" class="btn btn-primary">{{tag}}</a>
+  {% endfor %}
+</div>
+
+
+
 
 
 
 
 {% endblock %}
-<!-- </body>
-
-</html> -->
