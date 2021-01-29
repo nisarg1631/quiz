@@ -15,22 +15,22 @@ for num in data.keys():
         lo_data = json.load(f1) 
     for ques in lo_data.keys():
         if("mela" in lo_data[ques]["tags"]):  
-            mela.append(lo_data[ques])
+            mela.append((num,ques))
         
         if("gen" in lo_data[ques]["tags"]):  
-            gen.append(lo_data[ques])
+            gen.append((num,ques))
         
         if("ind" in lo_data[ques]["tags"]):  
-            ind.append(lo_data[ques])
+            ind.append((num,ques))
         
         if("st" in lo_data[ques]["tags"]):  
-            st.append(lo_data[ques])
+            st.append((num,ques))
         
         if("sp" in lo_data[ques]["tags"]):  
-            sp.append(lo_data[ques])
+            sp.append((num,ques))
         
         if("biz" in lo_data[ques]["tags"]):  
-            biz.append(lo_data[ques])
+            biz.append((num,ques))
         
 with open('./quiz_data/tagged/mela.json', 'w') as f:
     json.dump(mela, f)

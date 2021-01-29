@@ -31,4 +31,15 @@ def ques(quiz_num,ques_num):
     else:
         return "invalid 2"
 
+@app.route("/tags")
+def tag_landing():
+    return render_template("tag.html")
 
+@app.route("/tags/<tag>")
+def tag_page(tag):
+    if tag in ["mela","st","sp","biz","ind","gen"]:
+        with open(f'./quiz_data/tagged/{tag}.json') as f1:
+            lo_data = json.load(f1)
+        return render_template("actual_tag.html",TAG=tag,tag_data=lo_data)
+    else:
+        return "Invalid 1"
