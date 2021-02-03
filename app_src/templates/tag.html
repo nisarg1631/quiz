@@ -3,14 +3,43 @@
 {% block title %}Tags{% endblock %}
 
 {% block main %}
-<a href="../question/{{random[0]}}/{{random[1]}}" class="btn btn-info">Random {{rnd_topic}} Question</a>
+<div class="d-flex justify-content-center">
+    <a href="../question/{{random[0]}}/{{random[1]}}" class="btn btn-info">Random {{rnd_topic}} Question</a>
+</div>
+<br>
 
-<div class="card bg-primary">Topics</div>
-<a href="../../tags/mela" class="btn btn-info">mela</a>
-<a href="../../tags/ind" class="btn btn-info">ind</a>
-<a href="../../tags/st" class="btn btn-info">st</a>
-<a href="../../tags/sp" class="btn btn-info">sp</a>
-<a href="../../tags/biz" class="btn btn-info">biz</a>
-<a href="../../tags/gen" class="btn btn-info">gen</a>
+<!-- <div class="list-group">
+    <h3>Topics</h3>
+    <a href="../../tags/mela" class="btn btn-info">mela</a>
+    <a href="../../tags/ind" class="btn btn-info">ind</a>
+    <a href="../../tags/st" class="btn btn-info">st</a>
+    <a href="../../tags/sp" class="btn btn-info">sp</a>
+    <a href="../../tags/biz" class="btn btn-info">biz</a>
+    <a href="../../tags/gen" class="btn btn-info">gen</a>
+</div> -->
 
+
+<div class="d-flex justify-content-center">
+    <h3>Topics</h3>
+</div>
+<div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action list-group-item-info" href="../../tags/mela">
+        MELA
+    </button>
+    <button type="button" class="list-group-item list-group-item-action list-group-item-info" href="../../tags/ind">
+        INDIA
+    </button>
+    <button type="button" class="list-group-item list-group-item-action list-group-item-info" href="../../tags/st">
+        SCI-TECH
+    </button>
+    <button type="button" class="list-group-item list-group-item-action list-group-item-info" href="../../tags/sp">
+        SPORTS
+    </button>
+    <button type="button" class="list-group-item list-group-item-action list-group-item-info" href="../../tags/biz">
+        BUSINESS
+    </button>
+    <button type="button" class="list-group-item list-group-item-action list-group-item-info" href="../../tags/gen">
+        GENERAL
+    </button>
+</div>
 {% endblock %}
