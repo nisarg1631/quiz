@@ -4,13 +4,33 @@
 
 {% block main %}
 <!-- home page content -->
-
-
-<a href="../question/{{random[0]}}/{{random[1]}}" class="btn btn-info">Random Question</a>
+<div class="d-flex justify-content-center">
+    
+        <a href="../question/{{random[0]}}/{{random[1]}}" class="btn btn-info">Random Question</a>
+    
+</div>
 
 <div id="tags" class="card-body">
-    {% for x in tag_data %}
-    <a href="../question/{{x[0]}}/{{x[1]}}" class="btn btn-primary">{{x[0]}} {{x[1]}}</a>
-    {% endfor %}
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Quiz Name</th>
+                <th scope="col">Question Number</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in tag_data %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{quiz_name_data[x[0]][:-5]}}</td>
+                <td>{{x[1]}}</td>
+                <td><a href="../question/{{x[0]}}/{{x[1]}}" class="btn btn-primary">Question</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 </div>
 {% endblock %}
