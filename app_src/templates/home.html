@@ -3,5 +3,74 @@
 {% block title %}Quiz-Q{% endblock %}
 
 {% block main %}
-    <!-- home page content -->
+    <div class="row mt-5">
+        <div class="col-sm-4 mx-auto mb-2 d-flex justify-content-center">
+            <a href="/tags/mela">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='images/mela.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" style="color: black;">MELA</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4 mx-auto mb-2 d-flex justify-content-center">
+            <a href="/tags/biz">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='images/biz.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" style="color: black;">Biz</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4 mx-auto mb-2 d-flex justify-content-center">
+            <a href="/tags/gen">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='images/general.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" style="color: black;">General</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row mt-2 mb-5">
+        <div class="col-sm-4 mx-auto mb-2 d-flex justify-content-center">
+            <a href="/tags/st">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='images/scitech.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" style="color: black;">Sci-Tech</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4 mx-auto mb-2 d-flex justify-content-center">
+            <a href="/tags/sp">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='images/sports.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" style="color: black;">Sports</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4 mx-auto mb-2 d-flex justify-content-center">
+            <a href="/tags/ind">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='images/india.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" style="color: black;">India</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 {% endblock %}
