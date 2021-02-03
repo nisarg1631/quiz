@@ -26,7 +26,20 @@ def ques(quiz_num,ques_num):
             lo_data = json.load(f1)
         if(ques_num in lo_data.keys()):
             print("hi")
-            return render_template("question.html",question_data=lo_data[ques_num])
+            return render_template("question.html",question_data=lo_data[ques_num], quiz_num=quiz_num, ques_num=ques_num, quiz_name=data[quiz_num])
+        else :
+            return "invalid 1"
+    else:
+        return "invalid 2"
+
+@app.route("/question/<quiz_num>/<ques_num>/answer")
+def ques_ans(quiz_num,ques_num):
+    if(quiz_num in data): 
+        with open(f'./quiz_data/{data[quiz_num]}') as f1:
+            lo_data = json.load(f1)
+        if(ques_num in lo_data.keys()):
+            print("hi")
+            return render_template("answer.html",question_data=lo_data[ques_num], quiz_num=quiz_num, ques_num=ques_num, quiz_name=data[quiz_num])
         else :
             return "invalid 1"
     else:
