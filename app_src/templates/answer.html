@@ -10,7 +10,7 @@
       <h5 class="card-title" style="color: black;">Quiz: {{quiz_name[:-5]}}</h5>
       <p class="card-text" style="color: gray;">Answer {{ques_num[1:]}}</p>
         {% for tag in question_data['tags'] %}
-          <a href="../../tags/{{tag}}" class="btn btn-primary" style="background-color: grey; border-color: black;">{{tag}}</a>
+          <a href="../../../tags/{{tag}}" class="btn btn-primary" style="background-color: grey; border-color: black;">{{tag}}</a>
         {% endfor %}
         <div class="btn-group float-right" role="group" aria-label="Button group with nested dropdown">
           <a href="../{{ques_num}}" class="btn btn-primary float-right">Back to Question</a>
